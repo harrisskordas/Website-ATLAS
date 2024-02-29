@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="student_register_styling.css" />
+	<script src="register_script.js" defer></script>
+	<title>Registration Form</title>
+
+</head>
+
+<body>
+	<p><a href="index.html"><img src="C:\xampp\htdocs\myapp\dentcare-1.0.0\dentcare-1.0.0\atlas_icon.png"
+				style="width:100px;height:100px;margin-top:10px;"></a></p>
+	<ul class="breadcrumb">
+		<li><a href="λινκ αρχικης σελίδας">Home</a></li>
+		<li><a href="λινκ αρχικης εγγραφής">Φοιτητές/τριες</a></li>
+		<li>Εγγραφή</li>
+	</ul>
+	<form action="register.php" method="post" class="form" style="width:700px">
+		<h1 class="text-center">Εγγραφή</h1>
+
+		<!-- Progress bar -->
+		<div class="progressbar">
+			<div class="progress" id="progress"></div>
+
+			<div class="progress-step progress-step-active" data-title="Λογαριασμός"></div>
+			<div class="progress-step" data-title="Στοιχεία"></div>
+			<div class="progress-step" data-title="Βιογραφικό"></div>
+		</div>
+
+		<!-- 1 Step -->
+		<div class="form-step form-step-active">
+			<div class="input-group">
+				<input type="file" name="image[]" id="photo" />
+			</div>
+			<label for="imgage[]" style="margin-right:-60px;margin-top:-67px">Φωτογραφία*</label>
+			<div class="input-group">
+				<input type="text" name="username" required id="username" />
+			</div>
+			<label for="username" style="margin-right:-100px;margin-top:-67px">Όνομα Χρήστη*</label>
+			<div class="input-group">
+				<input type="email" name="email" id="email" />
+			</div>
+			<label for="email" style="margin-right:-100px;margin-top:-67px">Email*</label>
+			<div class="input-group">
+				<input type="password" name="password" id="password" />
+			</div>
+			<label for="password" style="margin-right:-100px;margin-top:-67px">Κωδικός Πρόσβασης* </label>
+			<div class="input-group">
+				<input type="password" name="conf_password" id="conf_password" />
+			</div>
+			<label for="conf_password" style="margin-right:-100px;margin-top:-67px">Επιβεβαίωση Κωδικού*</label>
+			<br><br>
+			<div class="">
+				<a href="#" class="btn btn-next width-50 ml-auto">Επόμενο</a>
+			</div>
+		</div>
+
+		<!-- 2 Step -->
+		<div class="form-step">
+			<div class="input-group">
+				<input type="text" name="name" id="name" />
+			</div>
+			<label for="name" style="margin-top:-70px">Ονοματεπώνυμο*</label>
+			<div class="input-group">
+				<input type="text" name="address" id="address" />
+			</div>
+			<label for="address" style="margin-top:-70px">Διεύθυνση*</label>
+			<div class="input-group">
+				<input type="date" name="dob" id="dob" />
+			</div>
+			<label for="dob" style="margin-top:-70px">Ημερομηνία Γέννησης*</label>
+			<div class="input-group">
+				<input type="tel" name="phone" id="phone" />
+			</div>
+			<label for="phone" style="margin-top:-70px">Τηλέφωνο*</label>
+			<br><br>
+			<div class="btns-group">
+				<a href="#" class="btn btn-prev">Προηγούμενο</a>
+				<a href="#" class="btn btn-next">Επόμενο</a>
+			</div>
+		</div>
+
+		<!-- 3 Final Step -->
+		<div class="form-step">
+			<div class="input-group">
+				<input type="text" name="uni" id="uni" />
+			</div>
+			<label for="uni" style="margin-top:-70px">Σχολή*</label>
+			<div class="input-group">
+				<input type="text" name="uni_part" id="uni_part" />
+			</div>
+			<label for="uni_part" style="margin-top:-70px">Τμήμα*</label>
+			<div class="input-group">
+				<input type="number" name="sem" id="sem" />
+			</div>
+			<label for="sem" style="margin-top:-70px">Εξάμηνο*</label>
+			<div class="input-group">
+				<!-- <label for="bio">Βιογραφικό*</label> -->
+				<input type="file" name="bio" id="bio" />
+			</div>
+			<label for="bio" style="margin-top:-70px">Βιογραφικό*</label>
+			<div class="input-group">
+				<textarea id="aboutme" name="aboutme" rows="4" cols="50"
+					style="width:353px;margin-left: 300px;margin-top: -3px;"></textarea>
+			</div>
+			<label for="aboutme" style="margin-top:-70px">Σχετικά με εμένα</label>
+			<br><br>
+			<label style="font-size:11px;text-align:left;">Έχω διαβάσει και αποδέχομαι τους <a
+					href="https://atlas.grnet.gr/Files/Atlas_Terms_And_Conditions.pdf" style="color:blue">όρους
+					συμμετοχής </a>στο
+				"Σύστημα Κεντρικής Υποστήριξης της Πρακτικής Άσκησης Φοιτητών ΑΕΙ"
+			</label>
+			<!-- <div class="check"> -->
+			<input type="checkbox" style="margin-left:-190px;margin-top: -33px;">
+			<!-- </div> -->
+			<br><br>
+			<div class="btns-group">
+				<a href="#" class="btn btn-prev" style="width: 300px;">Προηγούμενο</a>
+				<input type="submit" value="Δημιουργία Λογαριασμού" class="btn"
+					style="font-size:15px;margin-left:20px;width: 300px;" />
+			</div>
+		</div>
+		</div>
+	</form>
+</body>
+
+</html>
