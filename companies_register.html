@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="companies_register.css" />
+    <script src="register_script.js" defer></script>
+    <title>Registration Form</title>
+</head>
+
+<body>
+    <p><a href="index.php"><img src="C:\xampp\htdocs\startbootstrap-agency-gh-pages\atlas_icon.png"
+                style="width:100px;height:100px;margin-top:10px;"></a></p>
+    <ul class="breadcrumb">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="λινκ αρχικης εγγραφής">Φορείς Υποδοχής</a></li>
+        <li>Εγγραφή</li>
+    </ul>
+    <form action="registerForeas.php" method="post" class="form">
+        <h1 class="text-center">Εγγραφή</h1>
+        <br>
+        
+        <!-- Progress bar -->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+
+            <div class="progress-step progress-step-active" data-title="Λογαριασμός"></div>
+            <div class="progress-step" data-title="Στοιχεία Υπευθύνου για το Άτλας"></div>
+            <div class="progress-step" data-title="Στοιχεία Φορέα"></div>
+            <div class="progress-step" data-title="Στοιχεία Διεύθυνσης Έδρας"></div>
+            <div class="progress-step" data-title="Στοιχεία Νόμιμου Εκπρόσωπου"></div>
+        </div>
+
+        <!-- 1 Step -->
+        <br><br>
+        <div class="form-step form-step-active">
+            <div class="input-group">
+                <label for="imgage[]">Φωτογραφία</label>
+            </div>
+            <input type="file" name="image[]" id="photo"  style="margin-right:-100px;margin-top:-67px;"/>
+            <div class="input-group">
+                <label for="username">Όνομα Χρήστη*</label>
+            </div>
+            <input type="text" name="username" required id="username" style="margin-right:-100px;margin-top:-67px;" />
+            <div class="input-group">
+                <label for="email">Email*</label>
+            </div>
+            <input type="email" name="email_A" id="email_A" style="margin-right:-100px;margin-top:-67px;"/>
+            <div class="input-group">
+                <label for="password">Κωδικός Πρόσβασης*</label>
+            </div>
+            <input type="password" name="password" id="password" style="margin-right:-100px;margin-top:-67px;"/>
+            <div class="input-group">
+                <label for="conf_password">Επιβεβαίωση Κωδικού*</label>
+            </div>
+            <input type="password" name="conf_password" id="conf_password" style="margin-right:-100px;margin-top:-67px;"/>
+            <br><br>
+            <div class="">
+                <a href="#" class="btn btn-next width-50 ml-auto">Επόμενο</a>
+            </div>
+        </div>
+
+        <!-- 2 Step -->
+        <div class="form-step">
+            <div class="input-group">
+                <label for="name">Ονοματεπώνυμο*</label>
+            </div>
+            <input type="text" name="fullname_Y" id="fullname_Y" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="phone">Τηλέφωνο*</label>
+            </div>
+            <input type="tel" name="phone_Y" id="phone_Y" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="email">Email*</label>
+            </div>
+            <input type="email" name="email_Y" id="email_Y" style="margin-right:-100px;margin-top:-60px;"/>
+            <br><br>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Προηγούμενο</a>
+                <a href="#" class="btn btn-next">Επόμενο</a>
+            </div>
+        </div>
+
+        <!-- 3 Step -->
+        <div class="form-step">
+            <div class="input-group">
+                <label for="type">Είδος Φορέα*</label>
+            </div>
+            <input type="text" name="type" id="type" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="activity">Πεδίο Δραστηριότητας*</label>
+            </div>
+            <input type="text" name="activity" id="activity" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="brand">Επωνυμία*</label>
+            </div>
+            <input type="text" name="brand" id="brand" style="margin-right:-100px;margin-top:-60px;" />
+            <div class="input-group">
+                <label for="afm">ΑΦΜ*</label>
+            </div>
+            <input type="text" name="afm" id="afm" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="doy">ΔΟΥ*</label>
+            </div>
+            <input type="text" name="doy" id="doy" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="phone">Τηλέφωνο*</label>
+            </div>
+            <input type="tel" name="phone_C" id="phone_C" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="email">Email*</label>
+            </div>
+            <input type="email" name="email_C" id="email_C" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="site">Ιστοχώρος</label>
+            </div>
+           <input type="url" name="site" id="site" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="logo">Λογότυπο</label>
+            </div>
+            <input type="file" name="logo" id="logo" style="margin-right:-100px;margin-top:-64px;"/>
+            <div class="input-group">
+                <label for="aboutme">Στοιχεία για το Φορέα</label>
+                <textarea id="aboutme" name="aboutme" rows="4" cols="50" style="width:490px;margin-left: 350px;margin-top: -90px;"></textarea>
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Προηγούμενο</a>
+                <a href="#" class="btn btn-next">Επόμενο</a>
+            </div>
+        </div>
+
+        <!-- 4 Step -->
+        <div class="form-step">
+            <div class="input-group">
+                <label for="country">Χώρα*</label>
+            </div>
+            <input type="text" name="country" id="country" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="address">Διεύθυνση*</label>
+            </div>
+            <input type="text" name="address" id="address" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="tk">ΤΚ*</label>
+            </div>
+            <input type="text" name="tk" id="tk" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="region">Περιφερειακή Ενότητα*</label>
+            </div>
+            <input type="text" name="region" id="region" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="township">Δήμος*</label>
+            </div>
+            <input type="text" name="township" id="township" style="margin-right:-100px;margin-top:-60px;"/>
+            <br><br>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Προηγούμενο</a>
+                <a href="#" class="btn btn-next">Επόμενο</a>
+            </div>
+        </div>
+
+        <!-- 5 Final Step -->
+        <div class="form-step">
+            <div class="input-group">
+                <label for="name">Ονοματεπώνυμο*</label>
+            </div>
+            <input type="text" name="fullname_N" id="fullname_N" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="phone">Τηλέφωνο*</label>
+            </div>
+            <input type="tel" name="phone_N" id="phone_N" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="email">Email*</label>
+            </div>
+            <input type="email" name="email_N" id="email_N" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="num_id">Αριθμός Ταυτότητας ή Διαβατηρίου*</label>
+            </div>
+            <input type="text" name="num_id" id="num_id" style="margin-right:-100px;margin-top:-60px;"/>
+            <div class="input-group">
+                <label for="image_id">Φωτογραφία Ταυτότητας ή Διαβατηρίου*</label>
+            </div>
+            <input type="file" name="image_id" id="image_id" style="margin-right:-100px;margin-top:-60px;"/>
+            <br>
+            <label style="font-size:11px;text-align:left;">Έχω διαβάσει και αποδέχομαι τους <a
+                    href="https://atlas.grnet.gr/Files/Atlas_Terms_And_Conditions.pdf" style="color:blue">όρους
+                    συμμετοχής </a>στο
+                "Σύστημα Κεντρικής Υποστήριξης της Πρακτικής Άσκησης Φοιτητών ΑΕΙ"
+            </label>
+            <div class="check">
+                <input type="checkbox" style="margin-left: 5px;">
+            </div>
+            <div class="btns-group" style="margin-top: -30px">
+                <a href="#" class="btn btn-prev">Προηγούμενο</a>
+                <input type="submit" value="Δημιουργία Λογαριασμού" class="btn" style="font-size:15px;width:400px;margin-left: 50px;"/>
+            </div>
+        </div>
+
+    </form>
+</body>
+
+</html>
